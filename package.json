@@ -1,6 +1,6 @@
 {
   "name": "generator-react-parcel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React web app generator using the Parcel bundler",
   "homepage": "https://github.com/metakermit/generator-react-parcel",
   "author": {
