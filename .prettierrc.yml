@@ -1,0 +1,4 @@
+# configure prettier if you want to https://prettier.io/docs/en/options.html
+
+singleQuote: false
+printWidth: 90

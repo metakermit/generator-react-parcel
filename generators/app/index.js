@@ -1,12 +1,14 @@
-'use strict';
-const Generator = require('yeoman-generator');
-const chalk = require('chalk');
+"use strict";
+const Generator = require("yeoman-generator");
+const chalk = require("chalk");
 
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
     this.log(
-      'Welcome to the slick ' + chalk.red('generator-react-parcel') + ' generator!'
+      "Welcome to the slick " +
+        chalk.red("generator-react-parcel") +
+        " generator!"
     );
 
     const prompts = [
@@ -25,10 +27,17 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copy(this.templatePath('{/**/*,*}'), this.destinationPath('.'));
+    this.fs.copy(
+      this.templatePath("{/**/*,*}"),
+      // Without this "destionation" part writes to parent folder
+      this.destinationPath("./destination/"),
+      this.props
+    );
   }
 
   install() {
-    this.installDependencies();
+    this.installDependencies({
+      bower: false
+    });
   }
 };
