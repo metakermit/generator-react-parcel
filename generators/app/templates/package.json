@@ -1,5 +1,6 @@
 {
-    "name": "React + Parcel",
+    "name": "react-parcel",
+    "private": true,
     "version": "1.0.0",
     "description": "description",
     "main": "index.js",
@@ -8,5 +9,9 @@
         "start": "parcel index.html"
     },
     "keywords": [],
-    "author": ""
+    "author": "",
+    "devDependencies": {
+        "node-sass": "^4.8.3",
+        "parcel-bundler": "^1.7.0"
+    }
 }
